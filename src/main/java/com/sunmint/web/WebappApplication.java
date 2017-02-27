@@ -18,10 +18,20 @@ public class WebappApplication {
 	@Bean
 	public CommandLineRunner lineRunner(UserRepository repository) {
 		return (args) -> {
-			User user = new User("Garfield Smith","garfield@sunmint.com","admin");
+			User user = new User("Garfield Smith","garfield@sunmint.com","pass","admin");
 			repository.save(user);
 
-			log.info("Saved user - userName " + user.getUserName());
+			log.info("Saved user - userName " + user.getEmail());
+
+			user = new User("Andres Arango","andres@sunmint.com","pass","admin");
+			repository.save(user);
+
+			log.info("Saved user - userName " + user.getEmail());
+
+			user = new User("Administration","admin@sunmint.com","pass","admin");
+			repository.save(user);
+
+			log.info("Saved user - userName " + user.getEmail());
 		};
 	}
 }

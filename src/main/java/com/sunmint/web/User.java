@@ -15,7 +15,20 @@ public class User {
     private Integer version;
 
     @Id
-    private String userName;
+    private String email;
+
+    private String name;
+    private String password;
+    private String type;
+
+    public User(String name, String email, String password, String type) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.type = type;
+    }
+
+    public User(){}
 
     public Integer getVersion() {
         return version;
@@ -25,12 +38,12 @@ public class User {
         this.version = version;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getName() {
@@ -49,14 +62,4 @@ public class User {
         this.password = password;
     }
 
-    private String name;
-    private String password;
-
-    public User(String name, String userName, String password) {
-        this.name = name;
-        this.userName = userName;
-        this.password = password;
-    }
-
-    public User(){}
 }

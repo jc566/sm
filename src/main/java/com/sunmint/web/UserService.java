@@ -11,6 +11,8 @@ public interface UserService {
 
     void deleteUser(String userName);
 
-    User getUserByUserName(String userName);
+    User getUserByEmail(String email);
+
+    boolean isValidUser(String userName, String password);
 
 }
