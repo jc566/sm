@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width initial-scale=1">
+    <title>Bootstrap Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .jumbotron {
+            background-color: #2E2D88;
+            color: white;
+        }
+
+        .tab-content {
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .nav-tabs {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form id="leadForm" class="form-horizontal" action="#" th:object="${createLead}" th:action="@{/createLead}"  method="post">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>Lead Creator</legend>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="firstName"></label>
+                <div class="col-md-4">
+                    <input id="firstName" name="firstName" type="text" placeholder="First Name" class="form-control input-md" required="" th:field="*{firstName}">
+
+                </div>
+            </div>
+
+            <input type="hidden" th:field="*{version}"/>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="middleName"></label>
+                <div class="col-md-4">
+                    <input id="middleName" name="middleName" type="text" placeholder="M.I" class="form-control input-md" th:field="*{middleName}">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="lastName"></label>
+                <div class="col-md-4">
+                    <input id="lastName" name="lastName" type="text" placeholder="Last Name" class="form-control input-md" required="" th:field="*{lastName}">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="lastName"></label>
+                <div class="col-md-4">
+                    <input id="email" name="email" type="text" placeholder="e-mail" class="form-control input-md" required="" th:field="*{email}">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="street"></label>
+                <div class="col-md-4">
+                    <input id="street" name="street" type="text" placeholder="Street Name" class="form-control input-md" required="" th:field="*{street}">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="city"></label>
+                <div class="col-md-4">
+                    <input id="city" name="city" type="text" placeholder="City" class="form-control input-md" required="" th:field="*{city}">
+
+                </div>
+            </div>
+
+            <!-- Button Drop Down -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="state"></label>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input id="state" name="state" class="form-control" placeholder="State" type="text" required="" th:field="*{state}">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                Select
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="#">Alabama</a></li>
+                                <li><a href="#">Alaska</a></li>
+                                <li><a href="#">Arizona</a></li>
+                                <li><a href="#">Arkansas</a></li>
+                                <li><a href="#">California</a></li>
+                                <li><a href="#">Colorado</a></li>
+                                <li><a href="#">Connecticut</a></li>
+                                <li><a href="#">Delaware</a></li>
+                                <li><a href="#">Florida</a></li>
+                                <li><a href="#">Georgia</a></li>
+                                <li><a href="#">Hawaii</a></li>
+                                <li><a href="#">Idaho</a></li>
+                                <li><a href="#">Illinois</a></li>
+                                <li><a href="#">Indiana</a></li>
+                                <li><a href="#">Iowa</a></li>
+                                <li><a href="#">Kansas</a></li>
+                                <li><a href="#">Kentucky</a></li>
+                                <li><a href="#">Louisiana</a></li>
+                                <li><a href="#">Maine</a></li>
+                                <li><a href="#">Maryland</a></li>
+                                <li><a href="#">Massachusetts</a></li>
+                                <li><a href="#">Michigan</a></li>
+                                <li><a href="#">Minnesota</a></li>
+                                <li><a href="#">Mississippi</a></li>
+                                <li><a href="#">Missouri</a></li>
+                                <li><a href="#">Montana</a></li>
+                                <li><a href="#">Nebraska</a></li>
+                                <li><a href="#">Nevada</a></li>
+                                <li><a href="#">New Hampshire</a></li>
+                                <li><a href="#">New Jersey</a></li>
+                                <li><a href="#">New Mexico</a></li>
+                                <li><a href="#">New York</a></li>
+                                <li><a href="#">North Carolina</a></li>
+                                <li><a href="#">North Dakota</a></li>
+                                <li><a href="#">Ohio</a></li>
+                                <li><a href="#">Oklahoma</a></li>
+                                <li><a href="#">Oregon</a></li>
+                                <li><a href="#">Pennsylvania</a></li>
+                                <li><a href="#">Rhode Island</a></li>
+                                <li><a href="#">South Carolina</a></li>
+                                <li><a href="#">South Dakota</a></li>
+                                <li><a href="#">Tennessee</a></li>
+                                <li><a href="#">Texas</a></li>
+                                <li><a href="#">Utah</a></li>
+                                <li><a href="#">Vermont</a></li>
+                                <li><a href="#">Virginia</a></li>
+                                <li><a href="#">Washington</a></li>
+                                <li><a href="#">West Virginia</a></li>
+                                <li><a href="#">Wisconsin</a></li>
+                                <li><a href="#">Wyoming</a></li>
+                                <li><a href="#">District of Columbia</a></li>
+                                <li><a href="#">Puerto Rico</a></li>
+                                <li><a href="#">Guam</a></li>
+                                <li><a href="#">American Samoa</a></li>
+                                <li><a href="#">U.S. Virgin Islands</a></li>
+                                <li><a href="#">Northern Mariana Islands</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="zip"></label>
+                <div class="col-md-4">
+                    <input id="zip" name="zip" type="text" placeholder="Zip Code" class="form-control input-md" required="" th:field="*{zip}">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="monthlyBill"></label>
+                <div class="col-md-4">
+                    <input id="monthlyBill" name="monthlyBill" type="text" placeholder="Monthly Bill e.g (9.99)" class="form-control input-md" required="" th:field="*{monthlyBill}">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="monthlyUsage"></label>
+                <div class="col-md-4">
+                    <input id="monthlyUsage" name="monthlyUsage" type="text" placeholder="Monthly Usage" class="form-control input-md" required="" th:field="*{monthlyUsage}">
+
+                </div>
+            </div>
+
+            <!-- Button Drop Down -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="carrier"></label>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input id="carrier" name="carrier" class="form-control" placeholder="Carrier" type="text" required="" th:field="*{carrier}">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                Select
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="#">PSE&amp;G</a></li>
+                                <li><a href="#">ConEdison</a></li>
+                                <li><a href="#">Other</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="comments"></label>
+                <div class="col-md-4">
+                    <textarea class="form-control" id="comments" name="comments" th:field="*{comments}">Comments</textarea>
+                </div>
+            </div>
+
+            <!-- File Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="billFile"></label>
+                <div class="col-md-4">
+                    <input id="billFile" name="billFile" class="input-file" type="file" th:field="*{billFile}">
+                </div>
+            </div>
+
+            <!-- Button (Double) -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submit"></label>
+                <div class="col-md-8">
+                    <button id="submit" name="submit" class="btn btn-success">Submit</button>
+                    <button id="reset" name="reset" class="btn btn-danger" onclick="resetForm()">Reset</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
+    <script>
+        function resetForm() {
+            document.getElementById("leadForm").reset();
+        }
+    </script>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
