@@ -16,7 +16,7 @@ public class WebappApplication {
 	}
 
 	@Bean
-	public CommandLineRunner lineRunner(UserRepository repository) {
+	public CommandLineRunner lineRunner(UserRepository repository,LeadRepository leadRepository) {
 		return (args) -> {
 			User user = new User("Garfield Smith","garfield@sunmint.com","pass","admin");
 			repository.save(user);
@@ -32,6 +32,12 @@ public class WebappApplication {
 			repository.save(user);
 
 			log.info("Saved user - userName " + user.getEmail());
+
+			Lead lead = new Lead("nikolaTesla@tesla.com","Nikola","","Tesla","TeslaTown","New Jersey","898588",100,50,"PSE&G");
+			leadRepository.save(lead);
+
+			log.info("Saved lead - email " + lead.getEmail());
+
 		};
 	}
 }
