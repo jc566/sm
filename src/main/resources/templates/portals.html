@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="eng">
     <meta charset="utf-8">
-    <title>Divider</title>
+    <title>Portals</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Loading Bootstrap -->
@@ -27,13 +27,13 @@
 <body class=" hasGoogleVoiceExt">
 
 <h3>Welcome</h3>
-<p th:text="${name}">Portal y</p>
+<p th:text="${name}"></p>
 <div id="page" class="page">
 
     <section id="content2-9" class="content2-9">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 text-center">
+                <div href="/sales" class="col-md-3 text-center" role="button">
                     <div class="single-content text-center">
                         <div class="item-icon"><i class="fa fa-bar-chart"></i></div>
                         <div class="item-text">
@@ -71,7 +71,15 @@
                 </div>
             </div><!-- end row -->
         </div><!-- end container -->
-    </section></div><!-- /#page -->
+    </section>
+
+    <div class="jumbotron">
+        <p>
+            <a href="/sales" class="btn btn-default btn-lg" role="button">Sales</a>
+        </p>
+    </div>
+</div><!-- /#page -->
+
 
 
 <!--=== Load JS here for greater good ====-->
