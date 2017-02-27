@@ -32,7 +32,13 @@ public class LeadFormController {
     public String leadSubmit(@ModelAttribute Lead lead) {
         leadService.saveLead(lead);
         log.info("Lead saved - email " + lead.getEmail());
-        return "createLead";
+        return "redirect:/leads";
+    }
+
+    @RequestMapping(value = "/leads", method = RequestMethod.GET)
+    public String list(Model model){
+        model.addAttribute("leads", leadService.listAllLeads());
+        return "leads";
     }
 
 /*    @RequestMapping(value = "createLead", method = RequestMethod.POST)
