@@ -33,7 +33,7 @@ public class WebappApplication {
 
 			log.info("Saved user - userName " + user.getEmail());
 
-			Lead lead = new Lead("nikolaTesla@tesla.com","Nikola","","Tesla","TeslaTown","New Jersey","898588",100,50,"PSE&G");
+			Lead lead = new Lead("nikolaTesla@tesla.com","Nikola","","Tesla","TeslaTown","New Jersey","898588","customer",100,50,"PSE&G");
 			leadRepository.save(lead);
 
 			log.info("Saved lead - email " + lead.getEmail());
