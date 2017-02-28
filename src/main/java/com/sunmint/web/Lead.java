@@ -26,13 +26,14 @@ public class Lead {
     private String city;
     private String state;
     private String zip;
+    private String customerType;
     private Integer monthlyBill;
     private Integer monthlyUsage;
     private String carrier;
     private String comments;
     private String billFile;
 
-    public Lead(String email, String firstName, String middleName, String lastName, String city, String state, String zip, Integer monthlyBill, Integer monthlyUsage, String carrier) {
+    public Lead(String email, String firstName, String middleName, String lastName, String city, String state, String zip, String customerType, Integer monthlyBill, Integer monthlyUsage, String carrier) {
         this.email = email;
         this.firstName = firstName;
         this.middleName = middleName;
@@ -43,6 +44,7 @@ public class Lead {
         this.monthlyBill = monthlyBill;
         this.monthlyUsage = monthlyUsage;
         this.carrier = carrier;
+        this.customerType = customerType;
     }
 
     public Lead() {
@@ -158,5 +160,13 @@ public class Lead {
 
     public void setBillFile(String billFile) {
         this.billFile = billFile;
+    }
+
+    public String getCustomerType() {
+        return customerType;
+    }
+
+    public void setCustomerType(String customerType) {
+        this.customerType = customerType;
     }
 }
