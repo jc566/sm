@@ -32,8 +32,9 @@ public class Lead {
     private String carrier;
     private String comments;
     private String billFile;
+    private String telephone;
 
-    public Lead(String email, String firstName, String middleName, String lastName, String city, String state, String zip, String customerType, Integer monthlyBill, Integer monthlyUsage, String carrier) {
+    public Lead(String email, String firstName, String middleName, String lastName, String city, String state, String zip, String customerType, Integer monthlyBill, Integer monthlyUsage, String carrier, String telephone) {
         this.email = email;
         this.firstName = firstName;
         this.middleName = middleName;
@@ -45,6 +46,7 @@ public class Lead {
         this.monthlyUsage = monthlyUsage;
         this.carrier = carrier;
         this.customerType = customerType;
+        this.telephone = telephone;
     }
 
     public Lead() {
@@ -168,5 +170,13 @@ public class Lead {
 
     public void setCustomerType(String customerType) {
         this.customerType = customerType;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 }
