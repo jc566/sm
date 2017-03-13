@@ -12,4 +12,6 @@ public interface LeadService {
     void deleteLead(String email);
 
     Lead getLeadByEmail(String email);
+
+    Lead editLead(Lead lead);
 }

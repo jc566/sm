@@ -34,7 +34,7 @@ public class Lead {
     private String billFile;
     private String telephone;
 
-    public Lead(String email, String firstName, String middleName, String lastName, String city, String state, String zip, String customerType, Integer monthlyBill, Integer monthlyUsage, String carrier, String telephone) {
+    public Lead(String email, String firstName, String middleName, String lastName, String city, String state, String zip, String customerType, Integer monthlyBill, Integer monthlyUsage, String carrier, String telephone,String comments, String billFile) {
         this.email = email;
         this.firstName = firstName;
         this.middleName = middleName;
@@ -47,6 +47,8 @@ public class Lead {
         this.carrier = carrier;
         this.customerType = customerType;
         this.telephone = telephone;
+        this.comments = comments;
+        this.billFile = billFile;
     }
 
     public Lead() {

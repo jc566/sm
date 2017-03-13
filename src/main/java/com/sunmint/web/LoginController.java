@@ -44,7 +44,7 @@ public class LoginController {
             {
                 log.info("User logged in - email " + user.getEmail());
                 request.setAttribute("loggedInUser", user.getEmail());
-                model = new ModelAndView("portals");
+                model = new ModelAndView("dashboard_2");
                 modelU.addAttribute("name",userService.getUserByEmail(user.getEmail()).getName());
             }
             else
